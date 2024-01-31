@@ -82,8 +82,9 @@ function Dialog({ open, initialNote, closeDialog, postNote: postNoteState, patch
                 // Assuming postNoteState updates the state of your notes, replace it with your actual update handling function
                 // For example, you might want to update the note list in the parent component
                 patchNoteState(data._id, note.title, note.content); 
-                setStatus("Note updated successfully! and refresh the page");
-                //close(); // Close the dialog
+                window.location.reload();
+                setStatus("Note updated successfully!");
+                close(); // Close the dialog
             });
         }
     
